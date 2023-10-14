@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --activeColor : #7371F9;
+    --whiteColor : #ffff;
+    --subPara : #B0AAC0;
+    --btnColor:  #7373F9;
+    --cardContainerBgColor : #222;
+    --cardBgColor : #2f2f2f;
+}
+
+.rotate-image {
+    width: 100px; /* Set the width and height as needed */
+    height: 100px;
+    margin: 10px; /* Adjust spacing between images as needed */
+    animation: rotate 4s linear infinite; /* Adjust animation duration as needed */
+    transform-origin: center;
+}
+
+.container{
+    max-width: 1290px;
+    padding: 35px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+/* .active{
+    color: var(--activeColor) !important; if you uncomment this then porfolio section button color will be invisible due to same class name .active
+} */
+
