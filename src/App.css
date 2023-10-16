@@ -174,7 +174,7 @@ color: black;
 
 
 
-.navbar_bg {
+ .navbar_bg {
   background: url("/bg/bg\ \(2\).jpeg");
   width: 100%;  
 }
@@ -202,6 +202,7 @@ color: black;
   text-decoration: none;
   margin-right: 20px;
 }
+
 
 .logo {
   /* max-width: 100px; */

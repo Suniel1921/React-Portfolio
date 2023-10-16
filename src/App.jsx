@@ -10,6 +10,7 @@ import './App.css';
 
 import lightModeIcon from '/darklighticon/moon1.png'; // Replace with the actual path to your light mode icon
 import darkModeIcon from '/darklighticon/sun1.png'; // Replace with the actual path to your dark mode icon
+import Layout from './components/Layout/Layout';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -72,13 +73,14 @@ const App = () => {
       ) : (
         <div className="containersssss">
           <Router>
-            <Navbar />
             <Routes>
-              <Route path="/" element={<Home />} />
+            <Route path='/' element={<Layout/>}>
+            <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+            </Route>
             </Routes>
-            <Footer />
+            
           </Router>
         </div>
       )}
