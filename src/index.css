@@ -31,7 +31,7 @@
     overflow: hidden;
 }
 
-/* .active{
-    color: var(--activeColor) !important; if you uncomment this then porfolio section button color will be invisible due to same class name .active
-} */
+.active{
+    color: var(--activeColor) !important;
+}
 

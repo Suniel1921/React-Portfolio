@@ -1,5 +1,7 @@
 import React from 'react';
 import myImage from '../assets/logo/me.png'
+import myResume from '../assets/logo/sunil.pdf'
+
 import '../App.css';
 
 const About = () => {
@@ -12,8 +14,9 @@ const About = () => {
             <img className='myImage animImg' src={myImage} alt="myimage" />
             
                <div className="btns cvBtn">
-                  <a href={myImage} download={myImage}>  <button className='btn hiremebtn'>DOWNLOAD CV</button></a>
+                  <a href={myResume} download={myResume}>  <button className='btn hiremebtn'>DOWNLOAD CV</button></a>
                 </div>
+                
 
           </div>
 
@@ -31,11 +34,11 @@ const About = () => {
 
               <div className="myDetails_left">
                 <h2>NAME</h2>
-                <p className='subPara'>Suniel Sharma</p>
+                <p className='subPara para'>Suniel Sharma</p>
                 <h2>PHONE</h2>
-                <p className='subPara'>+977 9807865665</p>
+                <p className='subPara para'>+977 9807865665</p>
                 <h2>EMAIL</h2>
-                <p className='subPara'>anielthakur1921@gmail.com</p>
+                <p className='subPara para'>sunielsharma1921@gmail.com</p>
               </div>
 
               {/* <div className="btns">
@@ -45,21 +48,15 @@ const About = () => {
 
               <div className="myDetails_right">
                 <h2>AGE</h2>
-                <p className='subPara'>22</p>
+                <p className='subPara para'>22</p>
                 <h2>EDUCATION</h2>
-                <p className='subPara'>Bachelor in Computer Science</p>
+                <p className='subPara para'>Bachelor in Computer Science</p>
                 <h2>FREELANCE</h2>
-                <p className='subPara'>Available</p>
+                <p className='subPara para'>Available</p>
 
               </div>
 
             </div>
-
-
-
-
-
-
 
 
           </div>

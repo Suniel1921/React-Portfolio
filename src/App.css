@@ -1,5 +1,25 @@
 
 
+/* *********for h2 tag******* */
+h2 {
+  margin-top: 0;
+  margin-bottom: 1em; /* Customize margin for h2 */
+  font-weight: 700 !important; /* Customize font weight for h2 */
+}
+/* **************** */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 :root {
@@ -32,11 +52,6 @@
   background: url('/bg/lightbg.jpg');
   color: #222222;
 
-}
-
-.navbar_bg.dark-mode {
-  /* background: url("/bg/bg (3).jpeg"); */
- 
 }
 
 .home_container.light-mode{
@@ -194,7 +209,7 @@ color: black;
 .navlinks {
   list-style: none;
   display: flex;
-
+  z-index: 9999;
 }
 
 .navlinks a {
@@ -304,11 +319,11 @@ color: black;
 }
 .Me_center .para {
   font-size: 1.6rem;
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 .Me_center .heading {
   font-size: 5rem;
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 
 .Me_center h3{
@@ -324,7 +339,7 @@ color: black;
 }
 
 .Me_center .subHeading strong {
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 
 .btns {
@@ -338,7 +353,7 @@ color: black;
   border: none;
   border-radius: 5px;
   font-size: 18px;
-  font-weight: 700;
+  /* font-weight: 700 !important; */
   color: var(--whiteColor);
 }
 
@@ -409,7 +424,8 @@ color: black;
 
 .subPara {
   color: var(--subPara);
-  margin-top: 22px;
+  margin-top: 0px;
+  /* margin-top: -30px; */
 
 }
 .cardContents {
@@ -430,6 +446,12 @@ color: black;
   flex-wrap: wrap;
   gap: 2rem;
 }
+
+
+
+
+
+
 
 
 .card {
@@ -498,7 +520,7 @@ color: black;
   align-items: center;
   padding-top: 23px;
   color: var(--whiteColor);
-  line-height: 2rem;
+  line-height: 23px;
   gap: 3rem;
 }
 
@@ -707,7 +729,8 @@ color: black;
 
 .portfolio_container {
   background-color: var(--cardContainerBgColor);
-  min-height: 200vh;
+  min-height: 0vh;
+  /* min-height: 200vh; */
   padding-top: 84px;
 }
 .portfolio {
@@ -729,15 +752,23 @@ color: black;
 .filterBtn .button {
   background-color: transparent;
   color: white;
-  padding: 12px 13px;
+  /* padding: 12px 13px; */
+  padding: 6px 13px;
   border: 2px solid var(--cardBgColor);
   border-radius: 6px;
+  font-size: 13px;
 }
 
-.filterBtn .button.active {
+/* .filterBtn .button.active {
   background-color: #7371F9; 
   color:white;
+} */
+
+.filterBtn .button.selected {
+  background-color: #7371F9;
+  color: white;
 }
+
 
 .portfolioCards {
   display: flex;
@@ -752,12 +783,13 @@ color: black;
   background: var(--cardBgColor);
   border: none;
   color: var(--whiteColor);
-  min-height: 55vh;
+  /* min-height: 55vh; */
   border-radius: 8px;
   flex-basis: calc(33.33% - 2rem);
   margin-bottom: 2rem;
   overflow: hidden;
 }
+
 
 .cards img {
   transition: scale 600ms;
@@ -1099,7 +1131,8 @@ color: black;
     overflow: hidden;
 }
 .portfolio_container{
-  min-height: 400vh;
+  min-height: 0vh;
+  /* min-height: 400vh; */
  }
 
  .cards {
@@ -1161,7 +1194,7 @@ color: black;
 }
 .Me_center .heading {
   font-size: 4rem;
-  font-weight: 800;
+  font-weight: 800 !important;
 }
 
 .cards {
@@ -1216,14 +1249,18 @@ color: black;
     display:block;
   } */
 
+ 
+
   .subPara {
     color: var(--subPara);
     margin-top: 0px;
 }
 
+
+
   .Me_center .heading {
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: 800 !important;
 }
 
 .Me_center .subPara {
@@ -1316,7 +1353,7 @@ color: black;
 
   .Me_center .para {
     font-size: 22px;
-    font-weight: 800;
+    font-weight: 800 !important;
 }
 .Me_center .subPara {
   font-size: 19px;
@@ -1329,7 +1366,7 @@ color: black;
 
   .Me_center .heading {
     font-size: 2rem;
-    font-weight: 800;
+    font-weight: 800 I !important;
 }
 
 .btn {
@@ -1495,7 +1532,8 @@ color: black;
 
 
 .portfolio_container {
-  min-height: 655vh;
+  /* min-height: 655vh; */
+  min-height: 0vh;
   overflow: hidden;
 }
 
@@ -1538,10 +1576,12 @@ color: black;
     margin-top: 38px;
 }
 .cardsContainer {
-  min-height: 187vh;
+  min-height: 0vh;
+  /* min-height: 187vh; */
 }
 .about_container {
-  min-height: 165vh;
+  min-height: 0vh;
+  /* min-height: 165vh; */
 }
 .myskill_container {
   min-height: 78vh;
@@ -1551,16 +1591,13 @@ color: black;
   padding: 30px;
 }
 .portfolio_container {
-  min-height: 353vh;
+  min-height: 0vh;
+  /* min-height: 353vh; */
 }
 
 .Me_center .subPara {
   font-size: 11px;
 }
-
-
-
-
 }
 
 

@@ -1,8 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import locationIcon from '../assets/icon/icon.png'
+import toast from 'react-hot-toast';
+import axios from 'axios';
 
 
 const Contact = () => {
+  const [responseMessage, setResponseMessage] = useState(''); //this state is for showing response msg in paragraph form
+
+
+    const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post('http://localhost:3000/api/v1/contact_with_me', formData);
+      if (res.status === 200) {
+        toast.success(res.data.message);
+        setResponseMessage(res.data.message);
+        // Clear the form data after a successful submission
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+      }
+         // Automatically remove the response message after 3 seconds
+      setTimeout(() => {
+        setResponseMessage('');
+      }, 5000);
+
+    } catch (error) {
+      toast.error(`Something went wrong! ${error}`);
+    }
+  };
+
+
   return (
     <>
       <div className="contact_container">
@@ -46,17 +91,18 @@ const Contact = () => {
 
             <div className="right_Contact">
               <h2>Write me a message</h2>
-              <form className='form'>
+              <form className='form' onSubmit={submitHandler}>
                 <div className="input-row">
-                  <input className='input' type="text" name="name" id="name" placeholder="Name*" required />
-                  <input className='input' type="email" name="email" id="email" placeholder="Email*" required />
+                  <input onChange={handleChange} className='input' type="text" name="name" value={formData.name} id="name" placeholder="Name*" required />
+                  <input onChange={handleChange} className='input' type="email" name="email" value={formData.email} id="email" placeholder="Email*" required />
                 </div>
                 <div className="textarea-row">
-                  <textarea className='textarea' name="message" id="message" placeholder="Your Message*" required></textarea>
+                  <textarea onChange={handleChange} className='textarea' name="message" value={formData.message} id="message" placeholder="Your Message*" required></textarea>
                 </div>
-                <button className="btn hiremebtn sendMsg">Send Message</button>
-
+                <p style={{color: '#ff014f'}}>{responseMessage}</p>
+                <button type='submit' className="btn hiremebtn sendMsg">Send Message</button>
               </form>
+           
             </div>
           </div>
 

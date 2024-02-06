@@ -1,6 +1,14 @@
 import React from 'react';
 import '../App.css';
 
+//react icons
+import { AiOutlineCode } from 'react-icons/ai';
+import { BsRocketFill } from "react-icons/bs";
+import { SiReactos } from "react-icons/si";
+
+
+
+
 const Card = () => {
   return (
     <>
@@ -18,23 +26,20 @@ const Card = () => {
 
           <div className="parentCards">
             <div className="card" data-aos="fade-up" data-aos-delay="200">
-              <p>icons</p>
+            <p><BsRocketFill size={44} style={{color: '#7371f9'}} /></p>
               <h2>Dedication</h2>
               <p className='subPara'>Dedication is like a full-stack developer's heart, keeping them committed to making websites and apps great.</p>
-
             </div>
             <div className="card" data-aos="fade-up" data-aos-delay="400">
-              <p>icons</p>
+            <p><AiOutlineCode size={44} style={{color: '#7371f9'}} /></p>
               <h2>Creativity</h2>
               <p className='subPara'>Creativity empowers developers to craft unique, user-centric, and visually appealing web solutions.</p>
             </div>
             <div className="card" data-aos="fade-up" data-aos-delay="600">
-              <p>icons</p>
+            <p><SiReactos size={44} style={{color: '#7371f9'}}/></p>
               <h2>Hard Work</h2>
-              <p className='subPara'>
-Hard work is the relentless effort that fuels a developer's journey toward excellence, growth, and accomplishments</p>
+              <p className='subPara'> Hard work is the relentless effort that fuels a developer's journey toward excellence, growth, and accomplishments</p>
             </div>
-
 
           </div>
 

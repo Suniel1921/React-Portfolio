@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import myImage from '../assets/logo/me1.png';
 import stack1 from '../assets/stack/stackicon (1).png';
 import stack2 from '../assets/stack/stackicon (20).png';
@@ -15,10 +15,11 @@ import Portfolio from './Portfolio';
 import Contact from '../components/Contact';
 
 
-
-
-
 const Home = () => {
+
+
+
+
   // State to store mouse coordinates
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -28,6 +29,7 @@ const Home = () => {
     setMousePosition({ x: clientX, y: clientY });
   };
 
+
   return (
     <>
      <div className="home_container ">
@@ -36,10 +38,9 @@ const Home = () => {
           <img className='myImage animImg' src={myImage} alt="" />
           <p className='para'>Hello, My name is</p>
           <h1 className='heading'>Suniel <strong className='strong'>Sharma</strong> </h1>
-          <p className='subPara'>"Full-stack Devs Craft <strong> Digital</strong> Experiences." </p>
-         
-          <h3>fullStack Developer</h3>
+          <p className='subPara'>"Full-stack Devs Craft <strong> Digital</strong> Experiences." </p>         
 
+          <h3>fullStack Developer</h3>
 
           <div className="btns">
             <button className='btn hiremebtn'>HIRE ME</button>
